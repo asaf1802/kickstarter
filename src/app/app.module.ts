@@ -10,6 +10,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     LoginComponent,
     HomeComponent,
     AboutUsComponent,
+    UserComponent,
     
   ],
   imports: [
