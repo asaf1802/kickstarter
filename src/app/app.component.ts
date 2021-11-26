@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kickstarterProject';
+
+  public slogo = "assets/small logo.png"
 }
