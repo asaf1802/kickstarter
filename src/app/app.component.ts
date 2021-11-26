@@ -10,3 +10,4 @@ export class AppComponent {
 
   public slogo = "assets/small logo.png"
 }
+
