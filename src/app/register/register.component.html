@@ -1,24 +1,28 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <div class="row">
     <div class="col-md-6 offset-md-3 mt-4">
-        <h3>Register New Employer</h3>
+        <h3>Register to app</h3>
         <form>
-            <div class="form-group">
-                 <label for="registerFirstName">First name</label>
-                  <input type="email" class="form-control" id="registerFirstName" placeholder="Enter first name">
-             </div>
-             <div class="form-group">
-                 <label for="registerLastName">Last name</label>
-                  <input type="email" class="form-control" id="registerLastName" placeholder="Enter Last name">
-             </div>
-             <div class="form-group">
-                 <label for="registerEmail">Email address</label>
-                  <input type="email" class="form-control" id="registerEmail" placeholder="Enter email">
-             </div>
-             <div class="form-group">
-                 <label for="registerPassword">Password</label>
-                 <input type="password" class="form-control" id="registerPassword" placeholder="Password">
-             </div>
-                 <button type="submit" class="btn btn-primary">Register<i class="fas fa-sign-in-alt"></i></button>
+        <div class="form-group">
+             <label for="registerFirstName">First name</label>
+             <input type="email" class="form-control" id="registerFirstName" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+             <label for="registerLastName">First name</label>
+             <input type="email" class="form-control" id="registerLastName" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+              <label for="registerEmail">Email address</label>
+              <input type="email" class="form-control" id="registerEmail" placeholder="Enter email">
+         </div>
+         <div class="form-group">
+             <label for="loginPassword">Password</label>
+             <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+         </div>
+         <div class="form-group form-check">
+             <a [routerLink]="['/register']">new</a>
+          </div>
+             <button type="submit" class="btn btn-primary">Login<i class="fas fa-sign-in-alt"></i></button>
         </form>
     </div>
 </div>
