@@ -1,0 +1,10 @@
+.row{
+    align-items: center;
+    margin: auto;
+    border-radius: 20%;
+    height: auto;
+    width: 40%;
+    border-color: rgb(5, 206, 120);
+    margin-top: 2%;
+    padding-bottom: 1%;
+}
