@@ -13,11 +13,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-import { RegisterComponent } from './register/register.component';
+
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +26,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     LoginComponent,
     HomeComponent,
     AboutUsComponent,
-    RegisterComponent,
-    
+    SignUpComponent,
     
   ],
   imports: [

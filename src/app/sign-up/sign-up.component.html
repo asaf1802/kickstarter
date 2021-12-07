@@ -1,0 +1,18 @@
+<h1>SingUp</h1>
+<form #singupForm = "ngForm" (ngSubmit)="onSubmit()">
+    <div>
+        <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Ex: you@you.com" [(ngModel)] = email name = email required>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="8 charters or more" [(ngModel)] = password name = password required>
+        </mat-form-field>
+    </div>
+    <div>
+        <button [disabled] = "!singupForm.form.valid" type="submit" mat-raised-button color="primary">SingUp</button>
+    </div>
+</form>
