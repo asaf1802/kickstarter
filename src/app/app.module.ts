@@ -19,6 +19,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     HomeComponent,
     AboutUsComponent,
     SignUpComponent,
+    NavComponent,
     
   ],
   imports: [
