@@ -1,9 +1,10 @@
-<h1>Login1</h1>
-<form #loginForm = "ngForm" (ngSubmit)="onSubmit()">
+<img src="assets/login.jpg">
+<form #loginForm = "ngForm" (ngSubmit)="onSubmit()" class="loginC">
+    <h1>Login</h1>
     <div>
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="fill" >
         <mat-label>Email</mat-label>
-        <input matInput placeholder="Ex: you@you.com" [(ngModel)] = email name = email required>
+        <input matInput placeholder="Ex: you@you.com" [(ngModel)] = email name = email required >
         </mat-form-field>
     </div>
     <div>
