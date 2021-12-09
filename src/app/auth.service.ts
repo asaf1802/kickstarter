@@ -12,23 +12,11 @@ export class AuthService {
   user!:Observable<firebase.default.User|null>;
 
   SingUp(email:string,password:string){
-    this.afAuth.createUserWithEmailAndPassword(email,password).then(
-      res =>{
-        console.log('seccesful login');
-        this.router.navigate(['/home']);
-      }
-    )
+    return this.afAuth.createUserWithEmailAndPassword(email,password);
   }
   
   login(email:string,password:string){
-    this.afAuth
-        .signInWithEmailAndPassword(email,password)
-        .then(res =>{
-          console.log(res);
-          this.router.navigate(['/home']);
-        }
-        )
-
+    return this.afAuth.signInWithEmailAndPassword(email,password);
   }
 
   logout(){

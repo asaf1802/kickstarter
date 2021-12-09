@@ -16,4 +16,6 @@
     <div>
         <button [disabled] = "!singupForm.form.valid" type="submit" mat-raised-button color="primary">SingUp</button>
     </div>
+    <br>
+    <p *ngIf = "isError" style="color: red;">{{errorMessage}}</p>
 </form>

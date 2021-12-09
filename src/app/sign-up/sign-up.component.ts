@@ -1,5 +1,6 @@
 import { AuthService } from './../auth.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -10,11 +11,24 @@ export class SignUpComponent implements OnInit {
 
   email!:string;
   password!:string;
+  errorMessage!:string;
+  isError:boolean=false;
 
-  constructor(private authService:AuthService) { }
+  constructor(private authService:AuthService, private router:Router) { }
 
   onSubmit(){
-    this.authService.SingUp(this.email,this.password);
+    this.authService.SingUp(this.email,this.password).then(
+      res =>{
+        console.log('seccesful login');
+        this.router.navigate(['/home']);
+      }
+    ).catch(
+      err =>{
+        console.log(err);
+        this.isError = true;
+        this.errorMessage=err.message;
+      }
+    )
   }
 
   ngOnInit(): void {
