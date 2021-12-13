@@ -1,11 +1,11 @@
 h1{
     text-align: center;
-    font-family:Brush Script MT;
+    font-family:Rockwell;
 }
 
 h3{
     text-align: center;
-    font-family:Brush Script MT;
+    font-family:Rockwell;
     font-size:xx-large;
 }
 .center{
@@ -14,22 +14,26 @@ h3{
     margin-right: auto;
     width: 50%;
 }
-img {
+.imgH {
   float: left;
-  margin-left: 8%;
+  width: 40%;
 }
 .divF{
    padding-left: 3%; 
-   margin-left: 52%;
+   margin-left: 42%;
    border-left: 5px solid;
    border-color: rgb(15, 143, 112);
 
 }
+.storyimg{
+    width: 95%;
+    height: 95%;
+}
 .divStory{
     border: cadetblue 2px solid;
-    width: 25%;
+    width: 28%;
     float: left;
-    margin-right: 4%;
-    margin-left: 4%;
+    margin-right: 2%;
+    margin-left: 2%;
     text-align: center;
 }
