@@ -14,3 +14,22 @@ h3{
     margin-right: auto;
     width: 50%;
 }
+img {
+  float: left;
+  margin-left: 8%;
+}
+.divF{
+   padding-left: 3%; 
+   margin-left: 52%;
+   border-left: 5px solid;
+   border-color: rgb(15, 143, 112);
+
+}
+.divStory{
+    border: cadetblue 2px solid;
+    width: 25%;
+    float: left;
+    margin-right: 4%;
+    margin-left: 4%;
+    text-align: center;
+}
