@@ -1,12 +1,15 @@
-<div class="divhead">hello</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="divhead">
+    hello
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button *ngIf = "(authService.getUser())|async">go to model</button>
+</div>
 <img src="assets/homePic.PNG" class= "imgH">
 <div class="divAbout">
     About kickstarte: 

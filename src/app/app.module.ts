@@ -22,6 +22,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { NavComponent } from './nav/nav.component';
 
 import {YouTubePlayerModule} from '@angular/youtube-player';
+import { ModelComponent } from './model/model.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {YouTubePlayerModule} from '@angular/youtube-player';
     AboutUsComponent,
     SignUpComponent,
     NavComponent,
+    ModelComponent,
     
   ],
   imports: [
