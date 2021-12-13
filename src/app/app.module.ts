@@ -21,6 +21,8 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { NavComponent } from './nav/nav.component';
 
+import {YouTubePlayerModule} from '@angular/youtube-player';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +45,8 @@ import { NavComponent } from './nav/nav.component';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    YouTubePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
