@@ -13,6 +13,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import {MatSelectModule} from '@angular/material/select';
 
 
 import { AngularFireModule } from '@angular/fire/compat';
@@ -48,7 +49,8 @@ import { ModelComponent } from './model/model.component';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

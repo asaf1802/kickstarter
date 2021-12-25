@@ -1,1 +1,56 @@
 <p>model works!</p>
+<form class="inputForm">
+<h1>Input form</h1>
+  <mat-form-field appearance="fill">
+    <mat-label>Main category</mat-label>
+    <select required matNativeControl [(ngModel)]="selectedmainCategory" name="mainCategory" (change)=updateSubCategory(selectedmainCategory)>
+      <option *ngFor="let mainCategory of mainCategory" [value]="mainCategory.value">
+        {{mainCategory.viewValue}}
+      </option>
+    </select>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill" >
+    <mat-label>Sub category</mat-label>
+    <select required matNativeControl [(ngModel)]="selectSubcategory" name="selectSubcategory">
+      <option *ngFor="let subcategory of subCategory" [value]="subcategory.value">
+        {{subcategory.viewValue}}
+      </option>
+    </select>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill" >
+    <mat-label>Currency</mat-label>
+    <select required matNativeControl [(ngModel)]=selectedCurrency name="selectedCurrency">
+      <option *ngFor="let currency of currency" [value]="currency.value">
+        {{currency.viewValue}}
+      </option>
+    </select>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill" >
+    <mat-label>Country</mat-label>
+    <select required matNativeControl [(ngModel)]="selectedCountry" name="selectedCountry">
+      <option *ngFor="let country of country" [value]="country.value">
+        {{country.viewValue}}
+      </option>
+    </select>
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Duration (Days)</mat-label>
+    <input required [(ngModel)]="selectedDuration" matInput type="number" placeholder="Days. 12"  min="1" max="92">
+    <span matSuffix>d</span>
+  </mat-form-field>
+  <p> Selected category: {{selectSubcategory}}
+      <br>
+      Selected main category: {{selectedmainCategory}}
+      <br>
+      Selected currency: {{selectedCurrency}}
+      <br>
+      Selected currency: {{selectedCountry}}
+      <br>
+      Selected Duration: {{selectedDuration}}
+  </p>
+</form>
+
