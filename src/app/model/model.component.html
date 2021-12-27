@@ -1,5 +1,10 @@
 <form #inputForm = "ngForm" class="inputForm">
 <h1>Input form</h1>
+  <mat-form-field appearance="fill" >
+        <mat-label>Project name</mat-label>
+        <input matInput placeholder="Ex project" [(ngModel)] = selectedName name = selectedName required >
+  </mat-form-field>
+  <br>
   <mat-form-field appearance="fill">
     <mat-label>Main category</mat-label>
     <select required matNativeControl [(ngModel)]="selectedmainCategory" name="mainCategory" (change)=updateSubCategory(selectedmainCategory)>
@@ -54,9 +59,12 @@
   </p>
   <br>
   <br>
-  <p> Selected category: {{selectSubcategory}}
+  <p>
+    Selected Name: {{selectedName}}
       <br>
-      Selected main category: {{selectedmainCategory}}
+       Selected main category: {{selectedmainCategory}}
+      <br>
+     Selected category: {{selectSubcategory}}
       <br>
       Selected currency: {{selectedCurrency}}
       <br>

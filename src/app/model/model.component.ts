@@ -22,6 +22,7 @@ export class ModelComponent implements OnInit {
   selectedCountry!: string;
   selectedDuration!: string;
   selectedAmount!: string;
+  selectedName!: string;
 
   subCategory: subCategory[]=[];
   /*------------currency----------*/

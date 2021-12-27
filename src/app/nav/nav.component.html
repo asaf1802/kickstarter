@@ -12,6 +12,7 @@
       <button mat-button routerLink="/login" routerLinkActive="active" color="white" *ngIf = "!((authService.getUser())|async)">Login</button>
       <button mat-button routerLink="/singup" routerLinkActive="active" color="white" *ngIf = "!((authService.getUser())|async)">SingUp</button>
       <button mat-button color="white" (click) = "authService.logout()" *ngIf = "(authService.getUser())|async">Logout</button>
+      <img src="assets/userimg.png" style="width: 30%;height: 30%;float: right;" routerLink="/model" *ngIf = "(authService.getUser())|async">
   </div>
 </mat-toolbar>
 <div>

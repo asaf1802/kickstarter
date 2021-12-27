@@ -61,6 +61,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     ReactiveFormsModule,
     YouTubePlayerModule,
     MatSelectModule,
+    /*
       provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
@@ -69,7 +70,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     provideMessaging(() => getMessaging()),
     providePerformance(() => getPerformance()),
     provideRemoteConfig(() => getRemoteConfig()),
-    provideStorage(() => getStorage()),
+    provideStorage(() => getStorage()),*/
   ],
   providers: [
     ScreenTrackingService,UserTrackingService
