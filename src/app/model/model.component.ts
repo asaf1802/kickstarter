@@ -21,32 +21,33 @@ export class ModelComponent implements OnInit {
   selectedCurrency!: string;
   selectedCountry!: string;
   selectedDuration!: string;
+  selectedAmount!: string;
 
   subCategory: subCategory[]=[];
   /*------------currency----------*/
   country: mainCategory[] = [
-    {value: 'GB', viewValue: 'GB'},
-    {value: 'US', viewValue: 'US'},
-    {value: 'CA', viewValue: 'CA'},
-    {value: 'AU', viewValue: 'AU'},
-    {value: 'NO', viewValue: 'NO'},
-    {value: 'IT', viewValue: 'IT'},
-    {value: 'DE', viewValue: 'DE'},
-    {value: 'IE', viewValue: 'IE'},
-    {value: 'MX', viewValue: 'MX'},
-    {value: 'ES', viewValue: 'ES'},
-    {value: 'SE', viewValue: 'SE'},
-    {value: 'FR', viewValue: 'FR'},
-    {value: 'NZ', viewValue: 'NZ'},
-    {value: 'CH', viewValue: 'CH'},
-    {value: 'AT', viewValue: 'AT'},
-    {value: 'BE', viewValue: 'BE'},
-    {value: 'DK', viewValue: 'DK'},
-    {value: 'HK', viewValue: 'HK'},
-    {value: 'NL', viewValue: 'NL'},
-    {value: 'LU', viewValue: 'LU'},
-    {value: 'SG', viewValue: 'SG'},
-    {value: 'JP', viewValue: 'JP'},
+    {value: 'GB', viewValue: 'United Kingdom'},
+    {value: 'US', viewValue: 'United States'},
+    {value: 'CA', viewValue: 'Canada'},
+    {value: 'AU', viewValue: 'Australia'},
+    {value: 'NO', viewValue: 'Norway'},
+    {value: 'IT', viewValue: 'Italy'},
+    {value: 'DE', viewValue: 'Germany'},
+    {value: 'IE', viewValue: 'Ireland'},
+    {value: 'MX', viewValue: 'Mexico'},
+    {value: 'ES', viewValue: 'Spain'},
+    {value: 'SE', viewValue: 'Sweden'},
+    {value: 'FR', viewValue: 'France'},
+    {value: 'NZ', viewValue: 'New Zealand'},
+    {value: 'CH', viewValue: 'Switzerland'},
+    {value: 'AT', viewValue: 'Austria'},
+    {value: 'BE', viewValue: 'Belgium'},
+    {value: 'DK', viewValue: 'Denmark'},
+    {value: 'HK', viewValue: 'Hong Kong'},
+    {value: 'NL', viewValue: 'Netherlands'},
+    {value: 'LU', viewValue: 'Luxembourg'},
+    {value: 'SG', viewValue: 'Singapore'},
+    {value: 'JP', viewValue: 'Japan'},
   ];
   /*------------currency----------*/
   currency: mainCategory[] = [
