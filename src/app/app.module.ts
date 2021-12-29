@@ -21,6 +21,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { NavComponent } from './nav/nav.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import {YouTubePlayerModule} from '@angular/youtube-player';
 import { ModelComponent } from './model/model.component';
@@ -61,6 +62,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     ReactiveFormsModule,
     YouTubePlayerModule,
     MatSelectModule,
+    HttpClientModule,
     /*
       provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),

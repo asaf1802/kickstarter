@@ -1,3 +1,4 @@
+import { ClassifyService } from './../classify.service';
 import { Component, OnInit } from '@angular/core';
 interface mainCategory {
   value: string;
@@ -23,6 +24,16 @@ export class ModelComponent implements OnInit {
   selectedDuration!: string;
   selectedAmount!: string;
   selectedName!: string;
+  result:string = 'wait';
+
+  classify(){
+    this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,this.selectedDuration,this.selectedAmount).subscribe(
+      res =>{
+        console.log(res);
+        this.result=res;
+      }
+    )
+  }
 
   subCategory: subCategory[]=[];
   /*------------currency----------*/
@@ -69,21 +80,21 @@ export class ModelComponent implements OnInit {
   ];
   /*------------main Category----------*/
   mainCategory: mainCategory[] = [
-    {value: 'publishing', viewValue: 'Publishing'},
-    {value: 'film&video', viewValue: 'Film & Video'},
-    {value: 'music', viewValue: 'Music'},
-    {value: 'food', viewValue: 'Food'},
-    {value: 'crafts', viewValue: 'Crafts'},
-    {value: 'games', viewValue: 'Games'},
-    {value: 'design', viewValue: 'Design'},
-    {value: 'comics', viewValue: 'Comics'},
-    {value: 'fashion', viewValue: 'Fashion'},
-    {value: 'theater', viewValue: 'Theater'},
-    {value: 'art', viewValue: 'Art'},
-    {value: 'photography', viewValue: 'Photography'},
-    {value: 'technology', viewValue: 'Technology'},
-    {value: 'dance', viewValue: 'Dance'},
-    {value: 'journalism', viewValue: 'Journalism'},
+    {value: 'Publishing', viewValue: 'Publishing'},
+    {value: 'Film & Video', viewValue: 'Film & Video'},
+    {value: 'Music', viewValue: 'Music'},
+    {value: 'Food', viewValue: 'Food'},
+    {value: 'Crafts', viewValue: 'Crafts'},
+    {value: 'Games', viewValue: 'Games'},
+    {value: 'Design', viewValue: 'Design'},
+    {value: 'Comics', viewValue: 'Comics'},
+    {value: 'Fashion', viewValue: 'Fashion'},
+    {value: 'Theater', viewValue: 'Theater'},
+    {value: 'Art', viewValue: 'Art'},
+    {value: 'Photography', viewValue: 'Photography'},
+    {value: 'Technology', viewValue: 'Technology'},
+    {value: 'Dance', viewValue: 'Dance'},
+    {value: 'Journalism', viewValue: 'Journalism'},
   ];
   /*------------publishing----------*/
   categoryPublishing: subCategory[]=[
@@ -302,56 +313,56 @@ export class ModelComponent implements OnInit {
       {value: 'Photo', viewValue: 'Photo'},
     ];
 
-  constructor() { }
+  constructor(private classifyService:ClassifyService) { }
 
   ngOnInit(): void {
   }
 
   updateSubCategory(categoryName:string){
     switch (categoryName){
-      case 'publishing':
+      case 'Publishing':
         this.subCategory=this.categoryPublishing;
         break;
-      case 'film&video':
+      case 'Film & Video':
         this.subCategory=this.categoryFilmVideo;
         break;
-      case 'music':
+      case 'Music':
         this.subCategory=this.categoryMusic;
         break;
-      case 'food':
+      case 'Food':
         this.subCategory=this.categoryFood;
         break;
-      case 'crafts':
+      case 'Crafts':
         this.subCategory=this.categoryCrafts;
         break;
-      case 'games':
+      case 'Games':
         this.subCategory=this.categoryGames;
         break; 
-      case 'design':
+      case 'Design':
         this.subCategory=this.categoryDesign;
         break; 
-      case 'comics':
+      case 'Comics':
         this.subCategory=this.categoryComics;
         break; 
-      case 'fashion':
+      case 'Fashion':
             this.subCategory=this.categoryFashion;
             break; 
-      case 'theater':
+      case 'Theater':
         this.subCategory=this.categoryTheater;
         break; 
-      case 'art':
+      case 'Art':
         this.subCategory=this.categoryArt;
         break; 
-      case 'photography':
+      case 'Photography':
         this.subCategory=this.categoryPhotography;
         break;
-      case 'technology':
+      case 'Technology':
         this.subCategory=this.categoryTechnology;
         break;
-      case 'dance':
+      case 'Dance':
         this.subCategory=this.categoryDance;
         break;
-      case 'journalism':
+      case 'Journalism':
         this.subCategory=this.categoryJournalism;
         break;
       default:
