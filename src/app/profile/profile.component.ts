@@ -1,3 +1,5 @@
+import { AuthService } from './../auth.service';
+import { ProfileService } from './../profile.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,10 +10,19 @@ import { Component, OnInit } from '@angular/core';
 export class ProfileComponent implements OnInit {
 
   panelOpenState = false;
+  projects$: any;
+  userId!:any;
 
-  constructor() { }
+  constructor(private ProfileService:ProfileService, public authServise:AuthService) { }
 
   ngOnInit(): void {
+    this.authServise.getUser().subscribe(
+      user =>{
+        this.userId = user?.uid;
+        this.projects$ = this.ProfileService.getProject(this.userId)
+      }
+    )
+    //this.projects$ = this.ProfileService.getProject();
   }
 
 }
