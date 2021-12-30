@@ -14,6 +14,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import {MatSelectModule} from '@angular/material/select';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 import { AngularFireModule } from '@angular/fire/compat';
@@ -35,6 +36,7 @@ import { provideMessaging,getMessaging } from '@angular/fire/messaging';
 import { providePerformance,getPerformance } from '@angular/fire/performance';
 import { provideRemoteConfig,getRemoteConfig } from '@angular/fire/remote-config';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     SignUpComponent,
     NavComponent,
     ModelComponent,
+    ProfileComponent,
     
   ],
   imports: [
@@ -63,6 +66,7 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     YouTubePlayerModule,
     MatSelectModule,
     HttpClientModule,
+    MatExpansionModule,
     /*
       provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
