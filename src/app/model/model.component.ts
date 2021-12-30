@@ -24,7 +24,7 @@ export class ModelComponent implements OnInit {
   selectedDuration!: string;
   selectedAmount!: string;
   selectedName!: string;
-  result:string = 'wait';
+  result!:string;
 
   classify(){
     this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,this.selectedDuration,this.selectedAmount).subscribe(
