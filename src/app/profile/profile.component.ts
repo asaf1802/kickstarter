@@ -1,6 +1,7 @@
 import { AuthService } from './../auth.service';
 import { ProfileService } from './../profile.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-profile',
@@ -10,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProfileComponent implements OnInit {
 
   panelOpenState = false;
-  projects$: any;
+  projects$!: Observable<any | null>;
   userId!:any;
 
   constructor(private ProfileService:ProfileService, public authServise:AuthService) { }

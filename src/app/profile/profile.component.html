@@ -2,15 +2,34 @@
 <mat-accordion>
   <mat-expansion-panel (opened)="panelOpenState = true"
                        (closed)="panelOpenState = false"
+                       *ngFor ="let project of projects$ | async"
                        >
     <mat-expansion-panel-header>
       <mat-panel-title>
-        Self aware panel
+        Project Name: {{project.name}}
       </mat-panel-title>
       <mat-panel-description>
-        Currently I am {{panelOpenState ? 'open' : 'closed'}}
+        Chances of success: {{project.result}}
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <p>I'm visible because I am open</p>
+        Main category: {{project.main}}
+        <br>
+        <br>
+        Sub category:{{project.sub}}
+        <br>
+        <br>
+        Country: {{project.country}}
+        <br>
+        <br>
+        Currency: {{project.currency}}
+        <br>
+        <br>
+        Duration: {{project.duration}}
+        <br>
+        <br>
+        Goal: {{project.goal}}
+        <br>
+        <br>
+        <br>
   </mat-expansion-panel>
 </mat-accordion>
