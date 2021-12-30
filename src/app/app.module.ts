@@ -18,6 +18,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 
 
 import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule,AngularFirestore } from '@angular/fire/compat/firestore';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { SignUpComponent } from './sign-up/sign-up.component';
@@ -67,6 +68,9 @@ import { ProfileComponent } from './profile/profile.component';
     MatSelectModule,
     HttpClientModule,
     MatExpansionModule,
+    AngularFirestoreModule,
+    
+    
     /*
       provideAnalytics(() => getAnalytics()),
     provideAuth(() => getAuth()),
