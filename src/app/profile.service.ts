@@ -23,5 +23,9 @@ export class ProfileService {
       )
     ))
   }
+
+  deleteProject(userId:string ,id:string){
+    this.db.collection('users').doc(userId).collection('projects').doc(id).delete();
+  }
   constructor(private db:AngularFirestore) { }
 }

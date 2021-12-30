@@ -16,6 +16,10 @@ export class ProfileComponent implements OnInit {
 
   constructor(private ProfileService:ProfileService, public authServise:AuthService) { }
 
+  deleteProject(id:string){
+    this.ProfileService.deleteProject(this.userId,id)
+  }
+
   ngOnInit(): void {
     this.authServise.getUser().subscribe(
       user =>{

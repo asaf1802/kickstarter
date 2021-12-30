@@ -10,6 +10,7 @@
       </mat-panel-title>
       <mat-panel-description>
         Chances of success: {{project.result}}
+        <button style="margin-left: 60%;" mat-stroked-button color="primary" (click)="deleteProject(project.id)" >Delete</button>
       </mat-panel-description>
     </mat-expansion-panel-header>
         Main category: {{project.main}}
