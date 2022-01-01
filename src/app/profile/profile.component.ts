@@ -27,7 +27,6 @@ export class ProfileComponent implements OnInit {
         this.projects$ = this.ProfileService.getProject(this.userId)
       }
     )
-    //this.projects$ = this.ProfileService.getProject();
   }
 
 }

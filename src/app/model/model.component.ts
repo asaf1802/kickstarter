@@ -1,3 +1,5 @@
+import { AuthService } from './../auth.service';
+import { ProfileService } from './../profile.service';
 import { ClassifyService } from './../classify.service';
 import { Component, OnInit } from '@angular/core';
 interface mainCategory {
@@ -25,6 +27,8 @@ export class ModelComponent implements OnInit {
   selectedAmount!: string;
   selectedName!: string;
   result!:string;
+  userId!:any;
+  saveProject = false;
 
   classify(){
     this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,this.selectedDuration,this.selectedAmount).subscribe(
@@ -33,6 +37,10 @@ export class ModelComponent implements OnInit {
         this.result=res;
       }
     )
+  }
+
+  addProject(){
+    this.ProfileService.addProject(this.userId,this.selectedName,this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,this.selectedDuration,this.selectedAmount,this.result)
   }
 
   subCategory: subCategory[]=[];
@@ -313,9 +321,14 @@ export class ModelComponent implements OnInit {
       {value: 'Photo', viewValue: 'Photo'},
     ];
 
-  constructor(private classifyService:ClassifyService) { }
+  constructor(private classifyService:ClassifyService,private ProfileService:ProfileService, public authServise:AuthService) { }
 
   ngOnInit(): void {
+    this.authServise.getUser().subscribe(
+      user =>{
+        this.userId = user?.uid;
+      }
+    )
   }
 
   updateSubCategory(categoryName:string){

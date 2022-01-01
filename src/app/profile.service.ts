@@ -10,6 +10,7 @@ import { collection } from 'firebase/firestore';
 export class ProfileService {
 
   projectCollection!:AngularFirestoreCollection;
+  userCollection:AngularFirestoreCollection = this.db.collection('users')
 
   public getProject(userId:string){
     this.projectCollection = this.db.collection('users').doc(userId).collection('projects')
@@ -26,6 +27,11 @@ export class ProfileService {
 
   deleteProject(userId:string ,id:string){
     this.db.collection('users').doc(userId).collection('projects').doc(id).delete();
+  }
+
+  addProject(userId:string,name:string, main_category:string,sub_category:string,currency:string,country:string,duration:string,goal:string,result:string){
+    const project = {name:name,main:main_category,sub:sub_category,currency:currency,country:country,duration:duration,goal:goal,result:result};
+    this.userCollection.doc(userId).collection('projects').add(project);
   }
   constructor(private db:AngularFirestore) { }
 }
