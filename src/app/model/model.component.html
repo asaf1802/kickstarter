@@ -53,27 +53,35 @@
     <span matSuffix>$</span>
   </mat-form-field>
   <br>
-   <button [disabled] = "!inputForm.form.valid" (click)="classify()" (click)="saveProject = true" type="submit" mat-raised-button color="primary">Cheack your project</button>
+   <button [disabled] = "!inputForm.form.valid" (click)="classify()" (click)="saveProject = true" (click)="saveSucceed = false" type="submit" mat-raised-button color="primary">Cheack your project</button>
    <br>
    <br>
   <p style="font-size: x-large;"> 
       Chance of success of the project: {{result}}
   </p>
-   <button *ngIf = "saveProject" (click)="addProject()" type="submit" mat-raised-button color="primary">Save The Project</button>
-  <p>
-    Selected Name: {{selectedName}}
-      <br>
-       Selected main category: {{selectedmainCategory}}
-      <br>
-     Selected category: {{selectSubcategory}}
-      <br>
-      Selected currency: {{selectedCurrency}}
-      <br>
-      Selected currency: {{selectedCountry}}
-      <br>
-      Selected Duration: {{selectedDuration}}
-      <br>
-      Selected Amount: {{selectedAmount}}
-  </p>
+   <button [disabled] = "!saveProject"  (click)="addProject()" (click)="saveSucceed = true" (click)="saveProject = false" type="submit" mat-raised-button color="primary">Save The Project</button>
+   <br>
+   <p *ngIf = "saveSucceed" style="font-size: x-large; color: rgb(47, 199, 60);">
+     The save was successful
+   </p>
+   <br>
+   result12: {{result12}}
+   <br>
+   result20: {{result20}}
+   <br>
+   result30: {{result30}}
+   <br>
+   result40: {{result40}}
+   <br>
+   result50: {{result50}}
+   <br>
+   result60: {{result60}}
+   <br>
+   result70: {{result70}}
+   <br>
+   result80: {{result80}}
+   <br>
+   result92: {{result92}}
 </form>
+
 

@@ -25,8 +25,10 @@ export class SignUpComponent implements OnInit {
       res =>{
         console.log('seccesful login');
         this.router.navigate(['/home']);
+        /*
         this.userId= res.user?.uid
         this.ProfileService.addUser(this.userId,this.email,this.firstName,this.lastName);
+        */
       }
     ).catch(
       err =>{
@@ -34,16 +36,9 @@ export class SignUpComponent implements OnInit {
         this.isError = true;
         this.errorMessage=err.message;
       }
-    )
-
-    
+    )  
   }
   
-  addUser(){
-    this.userId = this.authService.getUser;
-    this.ProfileService.addUser(this.userId,this.email,this.firstName,this.lastName);
-  }
-
   ngOnInit(): void {
   }
 

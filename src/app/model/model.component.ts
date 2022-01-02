@@ -29,12 +29,77 @@ export class ModelComponent implements OnInit {
   result!:string;
   userId!:any;
   saveProject = false;
+  saveSucceed = false;
+  result12!:string;
+  result20!:string;
+  result30!:string;
+  result40!:string;
+  result50!:string;
+  result60!:string;
+  result70!:string;
+  result80!:string;
+  result92!:string;
+
 
   classify(){
     this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,this.selectedDuration,this.selectedAmount).subscribe(
       res =>{
         console.log(res);
         this.result=res;
+      }
+    )
+    this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'12',this.selectedAmount).subscribe(
+      res =>{
+        console.log(res);
+        this.result12=res;
+      }
+    )
+    this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'20',this.selectedAmount).subscribe(
+      res =>{
+        console.log(res);
+        this.result20=res;
+      }
+    )
+    this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'30',this.selectedAmount).subscribe(
+      res =>{
+        console.log(res);
+        this.result30=res;
+      }
+    )
+    this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'40',this.selectedAmount).subscribe(
+      res =>{
+        console.log(res);
+        this.result40=res;
+      }
+    )
+    this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'50',this.selectedAmount).subscribe(
+      res =>{
+        console.log(res);
+        this.result50=res;
+      }
+    )
+    this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'60',this.selectedAmount).subscribe(
+      res =>{
+        console.log(res);
+        this.result60=res;
+      }
+    )
+    this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'70',this.selectedAmount).subscribe(
+      res =>{
+        console.log(res);
+        this.result70=res;
+      }
+    )
+    this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'80',this.selectedAmount).subscribe(
+      res =>{
+        console.log(res);
+        this.result80=res;
+      }
+    )
+    this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'90',this.selectedAmount).subscribe(
+      res =>{
+        console.log(res);
+        this.result92=res;
       }
     )
   }
@@ -46,63 +111,63 @@ export class ModelComponent implements OnInit {
   subCategory: subCategory[]=[];
   /*------------currency----------*/
   country: mainCategory[] = [
-    {value: 'GB', viewValue: 'United Kingdom'},
-    {value: 'US', viewValue: 'United States'},
-    {value: 'CA', viewValue: 'Canada'},
     {value: 'AU', viewValue: 'Australia'},
-    {value: 'NO', viewValue: 'Norway'},
-    {value: 'IT', viewValue: 'Italy'},
-    {value: 'DE', viewValue: 'Germany'},
-    {value: 'IE', viewValue: 'Ireland'},
-    {value: 'MX', viewValue: 'Mexico'},
-    {value: 'ES', viewValue: 'Spain'},
-    {value: 'SE', viewValue: 'Sweden'},
-    {value: 'FR', viewValue: 'France'},
-    {value: 'NZ', viewValue: 'New Zealand'},
-    {value: 'CH', viewValue: 'Switzerland'},
     {value: 'AT', viewValue: 'Austria'},
     {value: 'BE', viewValue: 'Belgium'},
+    {value: 'CA', viewValue: 'Canada'},
     {value: 'DK', viewValue: 'Denmark'},
+    {value: 'FR', viewValue: 'France'},
+    {value: 'DE', viewValue: 'Germany'},
     {value: 'HK', viewValue: 'Hong Kong'},
-    {value: 'NL', viewValue: 'Netherlands'},
-    {value: 'LU', viewValue: 'Luxembourg'},
-    {value: 'SG', viewValue: 'Singapore'},
+    {value: 'IE', viewValue: 'Ireland'},
+    {value: 'IT', viewValue: 'Italy'},
     {value: 'JP', viewValue: 'Japan'},
+    {value: 'LU', viewValue: 'Luxembourg'},
+    {value: 'MX', viewValue: 'Mexico'},
+    {value: 'NL', viewValue: 'Netherlands'},
+    {value: 'NZ', viewValue: 'New Zealand'},
+    {value: 'NO', viewValue: 'Norway'},
+    {value: 'SG', viewValue: 'Singapore'},
+    {value: 'ES', viewValue: 'Spain'},
+    {value: 'SE', viewValue: 'Sweden'},
+    {value: 'CH', viewValue: 'Switzerland'},
+    {value: 'GB', viewValue: 'United Kingdom'},
+    {value: 'US', viewValue: 'United States'},
   ];
   /*------------currency----------*/
   currency: mainCategory[] = [
-    {value: 'GBP', viewValue: 'GBP'},
-    {value: 'USD', viewValue: 'USD'},
-    {value: 'CAD', viewValue: 'CAD'},
     {value: 'AUD', viewValue: 'AUD'},
-    {value: 'NOK', viewValue: 'NOK'},
-    {value: 'EUR', viewValue: 'EUR'},
-    {value: 'MXN', viewValue: 'MXN'},
-    {value: 'SEK', viewValue: 'SEK'},
-    {value: 'NZD', viewValue: 'NZD'},
+    {value: 'CAD', viewValue: 'CAD'},
     {value: 'CHF', viewValue: 'CHF'},
     {value: 'DKK', viewValue: 'DKK'},
+    {value: 'EUR', viewValue: 'EUR'},
+    {value: 'GBP', viewValue: 'GBP'},
     {value: 'HKD', viewValue: 'HKD'},
-    {value: 'SGD', viewValue: 'SGD'},
     {value: 'JPY', viewValue: 'JPY'},
+    {value: 'MXN', viewValue: 'MXN'},
+    {value: 'NOK', viewValue: 'NOK'},
+    {value: 'NZD', viewValue: 'NZD'},
+    {value: 'SEK', viewValue: 'SEK'},
+    {value: 'SGD', viewValue: 'SGD'},
+    {value: 'USD', viewValue: 'USD'},
   ];
   /*------------main Category----------*/
   mainCategory: mainCategory[] = [
-    {value: 'Publishing', viewValue: 'Publishing'},
-    {value: 'Film & Video', viewValue: 'Film & Video'},
-    {value: 'Music', viewValue: 'Music'},
-    {value: 'Food', viewValue: 'Food'},
-    {value: 'Crafts', viewValue: 'Crafts'},
-    {value: 'Games', viewValue: 'Games'},
-    {value: 'Design', viewValue: 'Design'},
-    {value: 'Comics', viewValue: 'Comics'},
-    {value: 'Fashion', viewValue: 'Fashion'},
-    {value: 'Theater', viewValue: 'Theater'},
     {value: 'Art', viewValue: 'Art'},
-    {value: 'Photography', viewValue: 'Photography'},
-    {value: 'Technology', viewValue: 'Technology'},
+    {value: 'Comics', viewValue: 'Comics'},
+    {value: 'Crafts', viewValue: 'Crafts'},
     {value: 'Dance', viewValue: 'Dance'},
+    {value: 'Design', viewValue: 'Design'},
+    {value: 'Fashion', viewValue: 'Fashion'},
+    {value: 'Film & Video', viewValue: 'Film & Video'},
+    {value: 'Food', viewValue: 'Food'},
+    {value: 'Games', viewValue: 'Games'},
     {value: 'Journalism', viewValue: 'Journalism'},
+    {value: 'Music', viewValue: 'Music'},
+    {value: 'Photography', viewValue: 'Photography'},
+    {value: 'Publishing', viewValue: 'Publishing'},
+    {value: 'Technology', viewValue: 'Technology'},
+    {value: 'Theater', viewValue: 'Theater'},
   ];
   /*------------publishing----------*/
   categoryPublishing: subCategory[]=[
