@@ -53,7 +53,7 @@
     <span matSuffix>$</span>
   </mat-form-field>
   <br>
-   <button [disabled] = "!inputForm.form.valid" (click)="classify()" (click)="saveProject = true" (click)="saveSucceed = false" type="submit" mat-raised-button color="primary">Cheack your project</button>
+   <button [disabled] = "!inputForm.form.valid" (click)="classify()" (click)="saveProject = true" (click)="ngAfterViewInit()"  (click)="saveSucceed = false" type="submit" mat-raised-button color="primary">Cheack your project</button>
    <br>
    <br>
   <p style="font-size: x-large;"> 
@@ -83,5 +83,7 @@
    <br>
    result92: {{result92}}
 </form>
-
+<div class="chart">
+   <canvas id="myChart" width="600" height="250" #mychart></canvas>
+</div>
 

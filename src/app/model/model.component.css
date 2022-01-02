@@ -1,3 +1,11 @@
 .inputForm{
     text-align: center;
+    width: 50%;
+    float: left;
+}
+.chart{
+    width:40%;
+    float: right;
+    margin-right: 10%;
+    margin-top: 5%;
 }

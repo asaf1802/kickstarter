@@ -1,7 +1,8 @@
+import { Chart } from 'chart.js';
 import { AuthService } from './../auth.service';
 import { ProfileService } from './../profile.service';
 import { ClassifyService } from './../classify.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild  } from '@angular/core';
 interface mainCategory {
   value: string;
   viewValue: string;
@@ -30,15 +31,40 @@ export class ModelComponent implements OnInit {
   userId!:any;
   saveProject = false;
   saveSucceed = false;
-  result12!:string;
-  result20!:string;
-  result30!:string;
-  result40!:string;
-  result50!:string;
-  result60!:string;
-  result70!:string;
-  result80!:string;
-  result92!:string;
+  result12!:number;
+  result20!:number;
+  result30!:number;
+  result40!:number;
+  result50!:number;
+  result60!:number;
+  result70!:number;
+  result80!:number;
+  result92!:number;
+  chartData!:[]
+
+
+  canvas: any;
+  ctx: any;
+  @ViewChild('mychart') mychart:any;
+
+  ngAfterViewInit() {
+    this.canvas = this.mychart.nativeElement; 
+    this.ctx = this.canvas.getContext('2d');
+
+    new Chart(this.ctx, {
+      type: 'line',
+      data: {
+          datasets: [{
+              label: '% of success',
+              data: [this.result12,this.result20,this.result30,this.result40,this.result50,this.result60,this.result70,this.result80,this.result92],
+              borderColor: 'rgb(75, 192, 192)',
+              fill: false,
+          },
+        ],
+          labels: ['12', '20', '30', '40', '50', '60', '70','80','92']
+      },
+  });
+  }
 
 
   classify(){
@@ -51,55 +77,55 @@ export class ModelComponent implements OnInit {
     this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'12',this.selectedAmount).subscribe(
       res =>{
         console.log(res);
-        this.result12=res;
+        this.result12=res as unknown as number;
       }
     )
     this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'20',this.selectedAmount).subscribe(
       res =>{
         console.log(res);
-        this.result20=res;
+        this.result20=res as unknown as number;
       }
     )
     this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'30',this.selectedAmount).subscribe(
       res =>{
         console.log(res);
-        this.result30=res;
+        this.result30=res as unknown as number;
       }
     )
     this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'40',this.selectedAmount).subscribe(
       res =>{
         console.log(res);
-        this.result40=res;
+        this.result40=res as unknown as number;
       }
     )
     this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'50',this.selectedAmount).subscribe(
       res =>{
         console.log(res);
-        this.result50=res;
+        this.result50=res as unknown as number;
       }
     )
     this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'60',this.selectedAmount).subscribe(
       res =>{
         console.log(res);
-        this.result60=res;
+        this.result60=res as unknown as number;
       }
     )
     this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'70',this.selectedAmount).subscribe(
       res =>{
         console.log(res);
-        this.result70=res;
+        this.result70=res as unknown as number;
       }
     )
     this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'80',this.selectedAmount).subscribe(
       res =>{
         console.log(res);
-        this.result80=res;
+        this.result80=res as unknown as number;
       }
     )
     this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'90',this.selectedAmount).subscribe(
       res =>{
         console.log(res);
-        this.result92=res;
+        this.result92=res as unknown as number;
       }
     )
   }
@@ -395,6 +421,7 @@ export class ModelComponent implements OnInit {
       }
     )
   }
+   
 
   updateSubCategory(categoryName:string){
     switch (categoryName){
