@@ -3,6 +3,18 @@
     <h1>SingUp</h1>
     <div>
         <mat-form-field appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="" [(ngModel)] = firstName name = firstName required>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="" [(ngModel)] = lastName name = lastName required>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
         <mat-label>Email</mat-label>
         <input matInput placeholder="Ex: you@you.com" [(ngModel)] = email name = email required>
         </mat-form-field>
@@ -19,3 +31,11 @@
     <br>
     <p *ngIf = "isError" style="color: red;">{{errorMessage}}</p>
 </form>
+
+first name: {{firstName}}
+<br>
+last name: {{lastName}}
+<br>
+email: {{email}}
+<br>
+password: {{password}}

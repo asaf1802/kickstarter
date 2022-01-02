@@ -20,6 +20,8 @@ export class ProfileComponent implements OnInit {
     this.ProfileService.deleteProject(this.userId,id)
   }
 
+  
+
   ngOnInit(): void {
     this.authServise.getUser().subscribe(
       user =>{

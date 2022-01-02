@@ -1,3 +1,6 @@
+<div *ngIf = "(authService.getUser())|async">
+    Wellcome Back
+</div>
 <div class="divhead">
     hello
     <br>
@@ -33,6 +36,8 @@
 <div class="title"><h2>Seccseful story</h2></div>
 <div>
     <div class="divStory">
+        <br>
+        <img src="assets/coolest.jpg" class= "storyimg">
         <br>
         <h3>Coolest cooler</h3>
         <br>

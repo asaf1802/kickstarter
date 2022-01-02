@@ -1,3 +1,4 @@
+import { ProfileService } from './../profile.service';
 import { AuthService } from './../auth.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -11,16 +12,21 @@ export class SignUpComponent implements OnInit {
 
   email!:string;
   password!:string;
+  firstName!:string;
+  lastName!:string;
   errorMessage!:string;
   isError:boolean=false;
+  userId!:any;
 
-  constructor(private authService:AuthService, private router:Router) { }
+  constructor(private authService:AuthService, private router:Router,private ProfileService:ProfileService) { }
 
   onSubmit(){
     this.authService.SingUp(this.email,this.password).then(
       res =>{
         console.log('seccesful login');
         this.router.navigate(['/home']);
+        this.userId= res.user?.uid
+        this.ProfileService.addUser(this.userId,this.email,this.firstName,this.lastName);
       }
     ).catch(
       err =>{
@@ -29,6 +35,13 @@ export class SignUpComponent implements OnInit {
         this.errorMessage=err.message;
       }
     )
+
+    
+  }
+  
+  addUser(){
+    this.userId = this.authService.getUser;
+    this.ProfileService.addUser(this.userId,this.email,this.firstName,this.lastName);
   }
 
   ngOnInit(): void {

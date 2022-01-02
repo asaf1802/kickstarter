@@ -1,5 +1,6 @@
 <h1>Your Project List</h1>
-<mat-accordion>
+<div class="list">
+<mat-accordion >
   <mat-expansion-panel (opened)="panelOpenState = true"
                        (closed)="panelOpenState = false"
                        *ngFor ="let project of projects$ | async"
@@ -36,3 +37,4 @@
         </div>
   </mat-expansion-panel>
 </mat-accordion>
+</div>
