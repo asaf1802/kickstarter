@@ -3,6 +3,8 @@ import { AuthService } from './../auth.service';
 import { ProfileService } from './../profile.service';
 import { ClassifyService } from './../classify.service';
 import { Component, OnInit,ViewChild  } from '@angular/core';
+import {delay} from 'rxjs/operators';
+
 interface mainCategory {
   value: string;
   viewValue: string;
@@ -46,11 +48,11 @@ export class ModelComponent implements OnInit {
   canvas: any;
   ctx: any;
   @ViewChild('mychart') mychart:any;
+  
 
   ngAfterViewInit() {
     this.canvas = this.mychart.nativeElement; 
     this.ctx = this.canvas.getContext('2d');
-
     new Chart(this.ctx, {
       type: 'line',
       data: {
