@@ -34,9 +34,6 @@ export class ProfileService {
     this.userCollection.doc(userId).collection('projects').add(project);
   }
 
-  addUser(userId:string,email:string,firstName:string,lastName:string){
-    const user = {uid:userId,email:email,firstName:firstName,lastName:lastName};
-    this.userCollection.add(user);
-  }
+
   constructor(private db:AngularFirestore) { }
 }

@@ -17,32 +17,19 @@
     <div style="width: 33%;margin-left: 10%;">
     <button  mat-stroked-button color="primary" (click)="deleteProject(project.id)" >Delete</button>
     </div>
-      <!-- <mat-panel-title>
-        Project Name: {{project.name}}
-      </mat-panel-title>
-      <mat-panel-description>
-        Chances of success: {{project.result}}
-        <button style="margin-left: 60%;" mat-stroked-button color="primary" (click)="deleteProject(project.id)" >Delete</button>
-      </mat-panel-description> -->
     </mat-expansion-panel-header>
-        <div>
+        <div class="details">
         Main category: {{project.main}}
-        <br>
         <br>
         Sub category: {{project.sub}}
         <br>
-        <br>
         Country: {{project.country}}
-        <br>
         <br>
         Currency: {{project.currency}}
         <br>
-        <br>
         Duration: {{project.duration}} days
         <br>
-        <br>
         Goal: {{project.goal}} $
-        <br>
         <br>
         <br>
         </div>

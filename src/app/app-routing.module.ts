@@ -15,6 +15,7 @@ const routes: Routes = [
   { path: 'singup', component: SignUpComponent },
   { path: 'model', component: ModelComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
 @NgModule({

@@ -19,11 +19,12 @@ export class SignUpComponent implements OnInit {
   userId!:any;
 
   constructor(private authService:AuthService, private router:Router,private ProfileService:ProfileService) { }
-
+ 
+   
   onSubmit(){
     this.authService.SingUp(this.email,this.password).then(
       res =>{
-        console.log('seccesful login');
+        console.log('seccesful singUp');
         this.router.navigate(['/home']);
         /*
         this.userId= res.user?.uid
