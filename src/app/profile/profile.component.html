@@ -1,3 +1,5 @@
+<br>
+<br>
 <h1>Your Project List</h1>
 <div class="list">
 <mat-accordion >
@@ -5,20 +7,29 @@
                        (closed)="panelOpenState = false"
                        *ngFor ="let project of projects$ | async"
                        >
-    <mat-expansion-panel-header style="background-color: rgb(238, 238, 238);">
-      <mat-panel-title>
+    <mat-expansion-panel-header style="background-color: rgb(247, 245, 245);">
+    <div style="width: 33%;">
+      Project Name: {{project.name}}
+    </div>
+    <div style="width: 33%;margin-left: 10%;">
+      Chances of success: {{project.result}}%
+    </div>
+    <div style="width: 33%;margin-left: 10%;">
+    <button  mat-stroked-button color="primary" (click)="deleteProject(project.id)" >Delete</button>
+    </div>
+      <!-- <mat-panel-title>
         Project Name: {{project.name}}
       </mat-panel-title>
       <mat-panel-description>
         Chances of success: {{project.result}}
         <button style="margin-left: 60%;" mat-stroked-button color="primary" (click)="deleteProject(project.id)" >Delete</button>
-      </mat-panel-description>
+      </mat-panel-description> -->
     </mat-expansion-panel-header>
-        <div style="background-color: rgb(243, 243, 243);">
+        <div>
         Main category: {{project.main}}
         <br>
         <br>
-        Sub category:{{project.sub}}
+        Sub category: {{project.sub}}
         <br>
         <br>
         Country: {{project.country}}
@@ -27,10 +38,10 @@
         Currency: {{project.currency}}
         <br>
         <br>
-        Duration: {{project.duration}}
+        Duration: {{project.duration}} days
         <br>
         <br>
-        Goal: {{project.goal}}
+        Goal: {{project.goal}} $
         <br>
         <br>
         <br>

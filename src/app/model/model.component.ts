@@ -57,7 +57,7 @@ export class ModelComponent implements OnInit {
       type: 'line',
       data: {
           datasets: [{
-              label: '% of success',
+              label: '% of success',             
               data: [this.result12,this.result20,this.result30,this.result40,this.result50,this.result60,this.result70,this.result80,this.result92],
               borderColor: 'rgb(75, 192, 192)',
               fill: false,

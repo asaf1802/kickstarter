@@ -1,5 +1,5 @@
 <form #inputForm = "ngForm" class="inputForm">
-<h1>Input form</h1>
+<h1>Test your project</h1>
   <mat-form-field appearance="fill" >
         <mat-label>Project name</mat-label>
         <input matInput placeholder="Ex project" [(ngModel)] = selectedName name = selectedName required >
@@ -43,12 +43,12 @@
   <br>
   <mat-form-field appearance="fill">
     <mat-label>Duration (Days)</mat-label>
-    <input required [(ngModel)] = selectedDuration name = selectedDuration matInput type="number" placeholder="min:12 max:92"  min="1" max="92">
+    <input required [(ngModel)] = selectedDuration name = selectedDuration matInput type="number" placeholder="min:12 max:92"  min="12" max="92">
     <span matSuffix>d</span>
   </mat-form-field>
   <br>
   <mat-form-field appearance="fill">
-    <mat-label>The amount raised ($)</mat-label>
+    <mat-label>Goal ($)</mat-label>
     <input required [(ngModel)] = selectedAmount name = selectedAmount matInput type="number" placeholder="USD. 12"  min="100" max="1000000">
     <span matSuffix>$</span>
   </mat-form-field>
@@ -65,26 +65,14 @@
    <p *ngIf = "saveSucceed" style="font-size: x-large; color: rgb(47, 199, 60);">
      The save was successful
    </p>
-   <br>
-   result12: {{result12}}
-   <br>
-   result20: {{result20}}
-   <br>
-   result30: {{result30}}
-   <br>
-   result40: {{result40}}
-   <br>
-   result50: {{result50}}
-   <br>
-   result60: {{result60}}
-   <br>
-   result70: {{result70}}
-   <br>
-   result80: {{result80}}
-   <br>
-   result92: {{result92}}
 </form>
 <div class="chart">
-   <canvas id="myChart" width="600" height="250" #mychart></canvas>
+  <h1>Prediction graph based on project duration</h1>
+  <br>
+  <div style="text-align: left;">
+   Project success(%) 
+   </div>
+   <canvas id="myChart" width="600" style="padding-left: 3%;" height="250" #mychart></canvas>
+   days of duration
 </div>
 
