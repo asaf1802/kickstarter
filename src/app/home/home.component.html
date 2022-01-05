@@ -2,39 +2,64 @@
     Welcome Back
 </div>
 <div style="float: right; width: 25%;">
-    <button class="modelBut" routerLink="/model" mat-fab color="primary"  *ngIf = "(authService.getUser())|async">go to model</button>
+    <button class="modelBut" routerLink="/model" mat-fab color="primary"  *ngIf = "(authService.getUser())|async">Test your <br> model</button>
 </div>
-<div class="divhead">
-    On our website we offer forecasting services for Kickstarter projects. 
+<div class="divhead" *ngIf = "(authService.getUser())|async">
+    <div style="font-size: x-large;">
+    Do you have a venture project that will be the next big thing?
     <br>
-    The service is designed to help you get an indication of the percentage of success of your project.Good luck with the venture!
+    Do you want to get started, but  you're not sure that it'll pan out? You came to the right place!
+    </div>
+    <br>
+    On our website we offer predictive services for venture projects to let you know how successful your kickstart will be.
+    <br> 
+    Our service predicts the success of the project according to the fulfillment of it's criteria.
+    <br>
+    So what should you do next?
+    <br>
+    <b>Click the "Test your model" button</b>
+    <br>
+    Good Luck!
     <br>
     <br>
+</div>
+<div class="divhead" *ngIf = "!((authService.getUser())|async)">
+    <div style="font-size: x-large;">
+    Do you have a venture project that will be the next big thing?
     <br>
+    Do you want to get started, but  you're not sure that it'll pan out? You came to the right place!
+    </div>
     <br>
+    On our website we offer predictive services for venture projects to let you know how successful your kickstart will be.
+    <br> 
+    Our service predicts the success of the project according to the fulfillment of it's criteria.
+    <br>
+    So what should you do next?
+    <br>
+    Click the "Sign Up" button.
+    <br>
+    Already registered? Excellent, let's get started and examine the successfulness of your project.
+    <br>
+    Good Luck!
     <br>
     <br>
 </div>
 <img src="assets/homePic.PNG" class= "imgH">
 <div class="divAbout">
-    <h3>About kickstarter:</h3> 
+    <h3>About kickstarter</h3> 
+    Kickstarter is an international company that offers mass recruitment services.
     <br>
-    Kickstarter is an international company that offers mass recruitment services. 
+    Many people find that they are able to achieve their goals for their kickstart business by using this website. They have found the secrets to becoming successful.
     <br>
-    Many projects find their breakthrough and succeed in meeting their goal. 
-    <br>
-    <br>
-    <br>
+    Kickstarter is specifically for creative projects in the following categories: Art, Comics, Crafts, Dance, Design, Fashion, Film & Video, Food, Games, Journalism, Music, Photography, Publishing, Technology, and Theater. Make an album, write a book, create an immersive theater experience, score a film — you name it.
     <br>
     <br>
-    <br>
-    <br>
+    If you want to read more: <a href="https://www.kickstarter.com/" target="_blank">Kickstarter website</a>
+  
 </div>
-<a style="margin-left: 47%;" href="https://www.kickstarter.com/" target="_blank">Kickstarter website</a>
 <br>
 <br>
-<br>
-<div class="title"><h2>Seccseful story</h2></div>
+<div class="title"><h2>Successful stories</h2></div>
 <div>
     <div class="divStory">
         <br>

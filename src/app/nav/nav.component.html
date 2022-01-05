@@ -6,7 +6,7 @@
       <span class="fill"></span>
       <button mat-button  routerLink="/home" routerLinkActive="active" color="white">Home</button>
       <button mat-button  routerLink="/aboutus" routerLinkActive="active" color="white">About Us</button>
-      <button mat-button  routerLink="/model" routerLinkActive="active" color="white" *ngIf = "(authService.getUser())|async">Model</button>
+      <button mat-button  routerLink="/model" routerLinkActive="active" color="white" *ngIf = "(authService.getUser())|async">Test</button>
   </div>
   <div style="margin-left: 70%;">
       <button mat-button routerLink="/login" routerLinkActive="active" color="white" *ngIf = "!((authService.getUser())|async)">Login</button>

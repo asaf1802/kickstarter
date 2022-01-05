@@ -55,8 +55,11 @@ h3{
     padding-top: 4%;
 }
 .modelBut{
-    width: 100px;
-    height: 100px;
+    width: 160px;
+    height: 160px;
+    font-size: x-large;
+    margin-left: 20%;
+    margin-top: 20%;
 }
 .divwelcome{
     text-align: center;
