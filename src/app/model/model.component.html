@@ -60,13 +60,13 @@
   <p style="font-size: x-large;"> 
       Chance of success of the project: {{result}} %
   <p *ngIf = "isgood" style="font-size: large; color: green">
-    your project is good
+    Good job! Your chance is high!
   <p>
   <p *ngIf = "isok" style="font-size: large; color: orange">
-    your project is ok
+    Your project is ok, but we suggest you to look for other options.
   <p>
   <p *ngIf = "isbad" style="font-size: large; color: red">
-    your project is bad
+    Your job can be better! Try something else.
   <p>
   </p>
    <button [disabled] = "!saveProject"  (click)="addProject()" (click)="saveSucceed = true" (click)="saveProject = false" type="submit" mat-raised-button color="primary">Save The Project</button>
