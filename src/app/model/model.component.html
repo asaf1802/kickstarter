@@ -53,12 +53,21 @@
     <span matSuffix>$</span>
   </mat-form-field>
   <br>
-   <button [disabled] = "!inputForm.form.valid" (click)="classify()" (click)="saveProject = true"  (click)="saveSucceed = false" type="submit" mat-raised-button color="primary">Cheack your project</button>
+   <button [disabled] = "!inputForm.form.valid" (click)="classify()" (click)="saveProject = true"  (click)="saveSucceed = false" type="submit" mat-raised-button color="primary">Check your project</button>
     <button mat-stroked-button color="primary" [disabled] = "!saveProject" (click)="ngAfterViewInit()" style="margin-left: 10px;">Check other option</button>
    <br>
    <br>
   <p style="font-size: x-large;"> 
       Chance of success of the project: {{result}} %
+  <p *ngIf = "isgood" style="font-size: large; color: green">
+    your project is good
+  <p>
+  <p *ngIf = "isok" style="font-size: large; color: orange">
+    your project is ok
+  <p>
+  <p *ngIf = "isbad" style="font-size: large; color: red">
+    your project is bad
+  <p>
   </p>
    <button [disabled] = "!saveProject"  (click)="addProject()" (click)="saveSucceed = true" (click)="saveProject = false" type="submit" mat-raised-button color="primary">Save The Project</button>
    <br>

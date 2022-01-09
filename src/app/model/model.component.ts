@@ -33,6 +33,10 @@ export class ModelComponent implements OnInit {
   userId!:any;
   saveProject = false;
   saveSucceed = false;
+  isbad = false;
+  isok = false;
+  isgood =false;
+  resultnumber!:number;
   result12!:number;
   result20!:number;
   result30!:number;
@@ -74,6 +78,22 @@ export class ModelComponent implements OnInit {
       res =>{
         console.log(res);
         this.result=res;
+        this.resultnumber=res as unknown as number;
+        if (this.resultnumber>=70) {
+          this.isgood=true;
+          this.isok=false;
+          this.isbad=false;
+        }
+        if (this.resultnumber>50 && this.resultnumber<70) {
+          this.isok=true;
+          this.isgood=false;
+          this.isbad=false;
+        }
+        if (this.resultnumber<=50) {
+          this.isbad=true;
+           this.isok=false;
+          this.isgood=false;
+        }
       }
     )
     this.classifyService.classify(this.selectedmainCategory,this.selectSubcategory,this.selectedCurrency,this.selectedCountry,'12',this.selectedAmount).subscribe(

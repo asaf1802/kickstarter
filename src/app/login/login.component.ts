@@ -26,7 +26,24 @@ export class LoginComponent implements OnInit {
       err =>{
         console.log(err);
         this.isError = true;
-        this.errorMessage=err.message;
+        switch (err.code) {
+                case "auth/invalid-email":{
+                  this.errorMessage = "The email address is badly formatted.";
+                  break;
+                }
+                case "auth/wrong-password":{
+                  this.errorMessage = "The password is invalid or the user does not have a password.";
+                  break;
+                }
+                case "auth/user-not-found": {
+                  this.errorMessage = "There is no user record corresponding to this identifier. The user may have been deleted.";
+                  break;
+                }
+                default: {
+                  this.errorMessage = "Unexpected Error";
+                  break;
+                }
+        }
       }
     )
   }

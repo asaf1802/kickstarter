@@ -36,6 +36,24 @@ export class SignUpComponent implements OnInit {
         console.log(err);
         this.isError = true;
         this.errorMessage=err.message;
+        switch (err.code) {
+                case "auth/invalid-email":{
+                  this.errorMessage = "The email address is badly formatted.";
+                  break;
+                }
+                case "auth/email-already-in-use":{
+                  this.errorMessage = "The email address is already in use by another account.";
+                  break;
+                }
+                case "auth/weak-password": {
+                  this.errorMessage = "Password should be at least 6 characters.";
+                  break;
+                }
+                default: {
+                  this.errorMessage = "Unexpected Error";
+                  break;
+                }
+        }
       }
     )  
   }
